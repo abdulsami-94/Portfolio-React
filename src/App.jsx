@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Projects from './data/Projects';
 import ProjectDetails from './ProjectDetails';
+import Contact from "./Contact";
 
 function App(){
   return(
@@ -11,6 +12,7 @@ function App(){
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/projects/:id" element={<ProjectDetails />} />
       </Routes>
     </Router>

@@ -11,6 +11,7 @@ function Navbar(){
         <nav className="NavBar">
             <Link to="/"> Home </Link>
             <Link to="/projects"> Projects </Link>
+            <Link to="/contact"> Contact</Link>
             {showBack && <Link to="./projects"> Back </Link>}
         </nav>
     );
