@@ -1,13 +1,11 @@
 import { useParams } from "react-router-dom";
-import { projects } from "./data/ProjectsData.jsx";
+import { projects } from "./data/ProjectsData";
 
 function ProjectDetails() {
 
     const { id } = useParams();
 
-    const project = projects.find(
-        (p) => p.id === Number(id)
-    );
+    const project = projects.find((p) => p.id === Number(id));
 
     if (!project) {
         return <p>Project not found</p>;

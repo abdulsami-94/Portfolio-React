@@ -42,3 +42,18 @@ export const projects = [
             link: "https://github.com/abdulsamishaikh/Tele-App"
         }
     ];
+
+    export function getProjectById(id) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const project = projects.find((p) => p.id === Number(id));
+
+                if (project) {
+                    resolve(project)
+                } else {
+                    reject("Project not found");
+                }
+                
+            }, 1500);
+        });
+    }
