@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { projects } from "./data/ProjectsData.jsx";
 
 function ProjectDetails() {
@@ -16,10 +16,6 @@ function ProjectDetails() {
     return (
 
         <div className="projectDetails">
-            <nav>
-                <Link to="/projects">Back</Link>
-            </nav>
-
             <h2>{project.title}</h2>
             <p>{project.title}</p>
             <p>{project.description}</p>
