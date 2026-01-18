@@ -4,15 +4,20 @@ import { projects } from "./ProjectsData.jsx";
 function Projects() {
 
         return (
-            <div className="projects">
+            <div className="project-page">
                 <h2>Projects Lists</h2>
-                <ul>
-                    {projects.map((project) => (
-                        <li key={project.id}>
-                            <Link to={`/projects/${project.slug}`}>{project.title}</Link>
-                        </li>
+                
+                    <div className="project-grid">
+                        {projects.map((project) => (
+
+                            <div key={project.id} className="project-card">
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+
+                                <Link to={`/projects/${project.slug}`}>View Project</Link>
+                            </div>
                     ))}
-                </ul>
+                    </div>
             </div>
         );  
 }
