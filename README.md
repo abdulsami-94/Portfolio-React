@@ -74,3 +74,22 @@ This document serves as a master log of everything learned, built, and debugged 
 - [ ] Use `const` for components and functions.
 - [ ] Always cleanup logs (`console.log`) before deployment.
 - [ ] Verify imports: Are they named exports `{ }` or default exports?
+
+## 🔗 Phase 5: Friendly URLs (Slugs)
+**Goal:** Replace numeric IDs (`/projects/1`) with human-readable names (`/projects/counter-app`).
+
+### 🔑 Key Concepts
+*   **Slugs**: Human-readable, URL-friendly unique identifiers.
+    *   Example: "Counter App" -> `counter-app`.
+    *   Good for SEO and user experience.
+*   **Data Normalization**: Ensuring your data source has the fields you need (`id` AND `slug`).
+*   **Type Safety**:
+    *   `useParams` always returns strings.
+    *   Comparing a string "slug" to a string "slug" is safer than comparing string "id" to number ID.
+
+### 🐛 Bugs & Fixes
+| Issue | Cause | Fix |
+| :--- | :--- | :--- |
+| **Route 404** | Route was still defined as `:id`. | Updated `App.jsx` to `path="/projects/:slug"`. |
+| **Project Not Found** | Code was looking for `p.id` that matched the slug string. | Updated logic to `p.slug === slug`. |
+| **Broken Links** | Links were still pointing to `.id`. | Updated `Projects.jsx` to `<Link to={project.slug}>`. |
