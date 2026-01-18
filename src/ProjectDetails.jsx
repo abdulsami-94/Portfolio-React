@@ -3,9 +3,9 @@ import { projects } from "./data/ProjectsData";
 
 function ProjectDetails() {
 
-    const { id } = useParams();
+    const { slug } = useParams();
 
-    const project = projects.find((p) => p.id === Number(id));
+    const project = projects.find((p) => p.slug === slug);
 
     if (!project) {
         return <p>Project not found</p>;
