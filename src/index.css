@@ -177,3 +177,11 @@ h2 {
     opacity: 0.9;
     transform: translateY(-2px);
 }
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

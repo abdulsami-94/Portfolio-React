@@ -4,6 +4,7 @@ import Home from './Home';
 import Projects from './data/Projects';
 import ProjectDetails from './ProjectDetails';
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 function App(){
   return(
@@ -15,6 +16,7 @@ function App(){
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
