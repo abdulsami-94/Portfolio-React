@@ -40,6 +40,13 @@ nav a:hover {
     color: var(--accent-primary);
 }
 
+nav a.active {
+    color: var(--accent-primary);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-primary);
+    padding-bottom: 0.25rem;
+}
+
 .project-page {
     max-width: 1200px;
     margin: 0 auto;

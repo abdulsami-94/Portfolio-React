@@ -9,9 +9,9 @@ function Navbar(){
 
     return(
         <nav className="NavBar">
-            <Link to="/"> Home </Link>
-            <Link to="/projects"> Projects </Link>
-            <Link to="/contact"> Contact</Link>
+            <Link to="/" className={ location.pathname === "/" ? "active" : "" }> Home </Link>
+            <Link to="/projects" className={ location.pathname === "/projects" ? "active" : "" }> Projects </Link>
+            <Link to="/contact" className={ location.pathname === "/contact" ? "active" : "" }> Contact</Link>
             {showBack && <Link to="./projects"> Back </Link>}
         </nav>
     );
